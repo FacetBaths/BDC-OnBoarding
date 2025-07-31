@@ -38,3 +38,69 @@ Thumbs.db
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Vue/Quasar specific
+.quasar
+/dist
+/src-cordova/node_modules
+/src-cordova/platforms
+/src-cordova/plugins
+/src-cordova/www
+
+# Capacitor
+/src-capacitor/www
+/src-capacitor/node_modules
+
+# BEX (Browser Extension)
+/src-bex/www
+/dist/bex
+
+# Temporary and cache files
+.cache
+.temp
+*.tmp
+*.temp
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# ESLint cache
+.eslintcache
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache (https://parceljs.org/)
+.parcel-cache
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# Firebase
+.firebase
+.firebaserc
+firebase-debug.log
+.runtimeconfig.json
+
+# Miscellaneous
+*.swp
+*~
