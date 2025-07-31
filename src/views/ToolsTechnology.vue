@@ -4,7 +4,7 @@
     <div class="page-header">
       <div class="logo-container">
         <img
-          src="/assets/Logo_v3_hi_res.png"
+          :src="logoUrl"
           alt="Facet Renovations Logo"
           class="header-logo"
         />
@@ -150,6 +150,12 @@
     </div>
   </div>
 </template>
+
+<script setup>
+import logoImage from '/assets/Logo_v3_hi_res.png'
+
+const logoUrl = logoImage
+</script>
 
 <style scoped>
 .tools-technology {

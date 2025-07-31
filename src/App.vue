@@ -2,12 +2,14 @@
 import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import PasswordProtection from "./components/PasswordProtection.vue";
+import logoDoImage from '/assets/Logo_DO.png';
+import logoMainImage from '/assets/Logo_v3_hi_res.png';
 
 const router = useRouter();
-
 const leftDrawerOpen = ref(false);
 const isAuthenticated = ref(false);
-
+const logoDoUrl = logoDoImage;
+const logoMainUrl = logoMainImage;
 // Check authentication status on app load
 const checkAuthStatus = () => {
   const authStatus = localStorage.getItem("bdcAuthenticated");
@@ -145,7 +147,7 @@ const trainingItems = [
 
         <div class="header-brand">
           <q-avatar size="36px" class="brand-logo">
-            <img src="/assets/Logo_DO.png" alt="Facet Renovations" />
+            <img :src="logoDoUrl" alt="Facet Renovations" />
           </q-avatar>
           <div class="brand-text">
             <div class="brand-title">BDC Onboarding</div>
@@ -218,7 +220,7 @@ const trainingItems = [
         <div class="drawer-footer">
           <div class="footer-logo">
             <q-img
-              src="/assets/Logo_v3_hi_res.png"
+              :src="logoMainUrl"
               class="footer-brand"
               fit="contain"
             />

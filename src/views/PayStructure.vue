@@ -6,7 +6,7 @@
           max-width="800px"
           width="100%"
           height="auto"
-          src="/assets/Logo_v3_hi_res.png"
+          :src="logoUrl"
           alt="Facet Renovations Logo"
         />
       </div>
@@ -60,6 +60,12 @@
     <div class="tagline">A luxurious look. A cut above.</div>
   </div>
 </template>
+
+<script setup>
+import logoImage from '/assets/Logo_v3_hi_res.png'
+
+const logoUrl = logoImage
+</script>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');

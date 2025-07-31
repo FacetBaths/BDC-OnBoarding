@@ -8,7 +8,7 @@
               <!-- Logo Section -->
               <div class="q-mb-lg">
                 <q-img
-                  src="/assets/Logo_v3_hi_res.png"
+                  :src="logoUrl"
                   style="height: 100px; max-width: 300px"
                   fit="contain"
                   class="q-mb-md"
@@ -116,11 +116,15 @@
 <script setup>
 import { ref } from 'vue'
 import { useQuasar } from 'quasar'
+import logoImage from '/assets/Logo_v3_hi_res.png'
 
 const $q = useQuasar()
 
 // Define emits
 const emit = defineEmits(['authenticated'])
+
+// Logo URL
+const logoUrl = logoImage
 
 // Reactive data
 const password = ref('')
