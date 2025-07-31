@@ -12,11 +12,16 @@ A Vue.js single-page application for Business Development Center onboarding at F
 
 ## Pages
 
+### Onboarding Section
 1. **Home** - Overview and welcome page
 2. **Pay Structure** - Current BDC pay structure details
 3. **Expectations & Responsibilities** - Key responsibilities and performance expectations
 4. **Tools & Technology** - List of tools and platforms used
 5. **Interface** - Company contact information and resources
+
+### Training Section
+1. **BDC WordTrax** - Customer conversation scripts and objection handling
+2. **Appointment Checklist** - Interactive checklist for qualifying leads
 
 ## Development
 
@@ -50,6 +55,15 @@ npm run build
 ```bash
 npm run preview
 ```
+
+## Deployment Structure
+
+This application is designed to be served from:
+
+- **Main Site**: `https://bdc.facetrenovations.us/` - Onboarding content
+- **Training**: `https://bdc.facetrenovations.us/training/` - Training resources
+
+The application uses hash-based routing to support both deployment scenarios.
 
 ## Project Structure
 

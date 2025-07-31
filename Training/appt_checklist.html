@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Checklist - Facet Renovations</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        body {
+            font-family: 'Tomorrow', sans-serif;
+            color: #7C7C7C;
+            margin: 0;
+            padding: 40px;
+            line-height: 1.6;
+            background-color: #ffffff;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(90deg, #9945FF 0%, #14F195 100%);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            font-size: 32px;
+            font-weight: 700;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        h2 {
+            font-size: 28px;
+            color: #9945FF;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+        p.intro {
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 30px;
+            color: #4A4A4A;
+            padding: 0 20px;
+            font-weight: 500;
+        }
+        .checklist {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .section {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #F9F9F9;
+            border-left: 5px solid #14F195;
+            border-radius: 5px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .title {
+            font-weight: 600;
+            color: #9945FF;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .optional .title {
+            font-style: italic;
+            color: #9945FF;
+        }
+        .row-div {
+            display: flex;
+            align-items: center;
+        }
+        .checkbox-div {
+            flex-shrink: 0;
+            margin-right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 40px;
+        }
+        input[type="checkbox"] {
+            accent-color: #9945FF;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            border: 2px solid #7C7C7C;
+            border-radius: 4px;
+        }
+        .description {
+            flex-grow: 1;
+            color: #4A4A4A;
+            font-weight: 400;
+            text-align: left;
+        }
+        .note {
+            font-style: italic;
+            margin-top: 30px;
+            color: #14F195;
+            text-align: center;
+            font-size: 16px;
+            padding: 10px;
+            background-color: #E6F7EF;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+        .footnote {
+            font-size: 12px;
+            color: #7C7C7C;
+            text-align: center;
+            margin-top: 10px;
+            font-weight: 400;
+        }
+        .tagline {
+            font-style: italic;
+            text-align: center;
+            margin-top: 30px;
+            color: #14F195;
+            font-size: 18px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Facet Renovations</div>
+    </div>
+    <h2>Appointment Checklist: Setting Strong Leads Together</h2>
+    <p class="intro">We're in this as a team—your thoroughness here turns leads into wins for everyone. Gather this info to qualify, confirm, and make appointments stick. We appreciate your persistence; it's how we all thrive!</p>
+    
+    <div class="checklist">
+        <section class="section">
+            <div class="title">Customer Full Name</div>
+            <div class="row-div">
+                <div class="checkbox-div"><input type="checkbox"></div>
+                <div class="description">Verify spelling and preferred name for personalized follow-up</div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="title">Primary Phone Number</div>
+            <div class="row-div">
+                <div class="checkbox-div"><input type="checkbox"></div>
+                <div class="description">Confirm it's accurate; note best time to call</div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="title">Backup Contact</div>
+            <div class="row-div">
+                <div class="checkbox-div"><input type="checkbox"></div>
+                <div class="description">Secondary phone or emergency number to ensure reachability</div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="title">Email Address</div>
+            <div class="row-div">
+                <div class="checkbox-div"><input type="checkbox"></div>
+                <div class="description">Get permission to send confirmations/reminders</div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="title">Home Address</div>
+            <div class="row-div">
+                <div class="checkbox-div"><input type="checkbox"></div>
+                <div class="description">Full address to confirm service area (Northern Illinois) and any access notes (e.g., gate code, parking)</div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="title">Project Type/Needs</div>
+            <div class="row-div">
+                <div class="checkbox-div"><input type="checkbox"></div>
+                <div class="description">Details like Wet space conversion or update, Full Remodel, Toilet, Vanities, Lighting, Flooring, New Bathroom Creation, or specific features (e.g., accessibility, modern vs. luxury style)</div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="title">Qualification Basics</div>
+            <div class="row-div">
+                <div class="checkbox-div"><input type="checkbox"></div>
+                <div class="description">Confirm they're the homeowner; ensure that they are a decision maker</div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="title">Appointment Date/Time</div>
+            <div class="row-div">
+                <div class="checkbox-div"><input type="checkbox"></div>
+                <div class="description">Preferred slot; double-check availability and note any flexibility. Will all decision makers be present at the appointment? Do they have any other companies coming to look at this time? If so, encourage them to schedule us first or last -- See BDC WordTrax Document</div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="title">Preferred Communication/Consent</div>
+            <div class="row-div">
+                <div class="checkbox-div"><input type="checkbox"></div>
+                <div class="description">How they want reminders (text, email, call); send initial confirmation right away. Also, request permission to send text messages (this consent will not be abused or transferred). Modify consent in LEAP appropriately</div>
+            </div>
+        </section>
+        <section class="section optional">
+            <div class="title">* Customer Recon/Report</div>
+            <div class="row-div">
+                <div class="checkbox-div"><input type="checkbox"></div>
+                <div class="description">If the conversation flows naturally, inquire about their motivations for the project (e.g., "What inspired this remodel?") and any recent home improvements they've completed. This builds rapport and provides valuable insights for the sales team</div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="title">Pertinent Notes</div>
+            <div class="row-div">
+                <div class="checkbox-div"><input type="checkbox"></div>
+                <div class="description">Jot down pertinent notes like excitements (e.g., "Loves modern designs") or anything that could prove helpful for sales prep</div>
+            </div>
+        </section>
+    </ul>
+    
+    <p class="note">Your attention here builds lasting relationships and boosts our shared success—thanks for caring as much as we do!</p>
+    <div class="footnote">* Optional but encouraged step to enhance customer connection and sales readiness.</div>
+    <div class="tagline">A luxurious look. A cut above.</div>
+</body>
+</html>
