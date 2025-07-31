@@ -17,6 +17,7 @@
   "devDependencies": {
     "@quasar/vite-plugin": "^1.10.0",
     "@vitejs/plugin-vue": "^5.0.0",
+    "sass-embedded": "^1.89.2",
     "vite": "^5.0.0"
   },
   "type": "module"
