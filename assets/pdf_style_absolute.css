@@ -1,0 +1,373 @@
+/* PDF-Optimized Styles for BDC Onboarding Materials using absolute paths */
+
+/* Import Tomorrow Font using absolute file paths */
+@font-face {
+    font-family: 'Tomorrow';
+    src: url('file:///home/proto/facet/Documents/On-boarding/BDC/On-Boarding Parts/web/assets/fonts/Tomorrow/Tomorrow-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tomorrow';
+    src: url('file:///home/proto/facet/Documents/On-boarding/BDC/On-Boarding Parts/web/assets/fonts/Tomorrow/Tomorrow-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tomorrow';
+    src: url('file:///home/proto/facet/Documents/On-boarding/BDC/On-Boarding Parts/web/assets/fonts/Tomorrow/Tomorrow-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Tomorrow';
+    src: url('file:///home/proto/facet/Documents/On-boarding/BDC/On-Boarding Parts/web/assets/fonts/Tomorrow/Tomorrow-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tomorrow';
+    src: url('file:///home/proto/facet/Documents/On-boarding/BDC/On-Boarding Parts/web/assets/fonts/Tomorrow/Tomorrow-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Body and base styles */
+body {
+    font-family: 'Tomorrow', 'Arial', sans-serif;
+    color: #7C7C7C;
+    margin: 0 auto;
+    padding: 20mm;
+    line-height: 1.6;
+    background-color: #ffffff;
+    font-size: 12pt;
+    max-width: none;
+}
+
+/* Header styling */
+.header {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 20pt auto;
+    padding: 15pt;
+    border-radius: 8pt;
+    box-shadow: 0 1pt 3pt 1pt #14F195, 0 -0.5pt 2pt 1.5pt #9945FF;
+}
+
+/* Logo styling - Fixed for consistent PDF rendering */
+.logo {
+    display: block;
+    text-align: center;
+    margin-bottom: 10mm;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.logo img {
+    max-width: 100%;
+    max-height: 60mm;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    vertical-align: middle;
+}
+
+/* General section styling - only for specific classes */
+.pay-section, .tool-section {
+    padding: 15pt;
+    background-color: #F9F9F9;
+    border-left: 4pt solid #14F195;
+    border-radius: 4pt;
+    margin-bottom: 20pt;
+    page-break-inside: avoid;
+}
+
+.objection-section {
+    padding: 8pt;
+    background-color: #F9F9F9;
+    border-left: 4pt solid #14F195;
+    border-radius: 4pt;
+    margin-bottom: 15pt;
+    page-break-inside: avoid;
+}
+
+.objection {
+    padding: 8pt;
+    background-color: #E6F7EF;
+    border-left: 3pt solid #14F195;
+    border-radius: 3pt;
+    margin-bottom: 8pt;
+    font-weight: 500;
+}
+
+.response {
+    padding: 8pt;
+    margin-left: 15pt;
+    background-color: #F0F0F0;
+    border-left: 3pt solid #9945FF;
+    border-radius: 3pt;
+    margin-bottom: 8pt;
+    font-weight: 500;
+}
+
+.rationale {
+    padding: 6pt;
+    margin-left: 30pt;
+    font-style: italic;
+    color: #4A4A4A;
+    font-weight: 400;
+    font-size: 10pt;
+    line-height: 1.4;
+}
+
+.checklist .section {
+    padding: 10pt;
+    background-color: #F9F9F9;
+    border-left: 4pt solid #14F195;
+    border-radius: 4pt;
+    margin-bottom: 8pt;
+    page-break-inside: avoid;
+}
+
+.row-div {
+    display: flex;
+    align-items: flex-start;
+    gap: 10pt;
+}
+
+.checkbox-div {
+    flex-shrink: 0;
+    width: 20pt;
+    height: 20pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="checkbox"] {
+    width: 15pt;
+    height: 15pt;
+    accent-color: #9945FF;
+    border: 1pt solid #7C7C7C;
+    border-radius: 2pt;
+}
+
+.description {
+    flex-grow: 1;
+    color: #4A4A4A;
+    font-weight: 400;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.footnote {
+    font-size: 9pt;
+    color: #7C7C7C;
+    text-align: center;
+    margin-top: 10pt;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.optional .title {
+    font-style: italic;
+    color: #9945FF;
+}
+
+p.intro {
+    text-align: center;
+    font-size: 11pt;
+    margin-bottom: 20pt;
+    color: #4A4A4A;
+    padding: 0 15pt;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* Typography */
+.title {
+    font-size: 18pt;
+    color: #9945FF;
+    margin-bottom: 15pt;
+    font-weight: 600;
+    text-align: center;
+}
+
+h1 {
+    font-size: 22pt;
+    color: #9945FF;
+    margin-bottom: 20pt;
+    font-weight: 600;
+    text-align: center;
+}
+
+h2 {
+    font-size: 18pt;
+    color: #9945FF;
+    margin-bottom: 15pt;
+    font-weight: 600;
+    text-align: center;
+}
+
+h3 {
+    font-size: 16pt;
+    color: #9945FF;
+    margin-bottom: 10pt;
+    font-weight: 600;
+}
+
+/* Lists */
+ul {
+    width: 100%;
+    margin: 0 auto 15pt auto;
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 8pt;
+    padding: 12pt;
+    background-color: #F9F9F9;
+    border-left: 4pt solid #14F195;
+    border-radius: 4pt;
+}
+
+/* Special text elements */
+.note, .tagline {
+    font-style: italic;
+    text-align: center;
+    margin-top: 20pt;
+    color: #14F195;
+    font-size: 14pt;
+    padding: 10pt;
+    background-color: #E6F7EF;
+    border-radius: 4pt;
+    font-weight: 500;
+}
+
+.tagline {
+    font-size: 16pt;
+    font-weight: 600;
+}
+
+/* Sections */
+.section, .pay-section, .tool-section {
+    padding: 15pt;
+    background-color: #F9F9F9;
+    border-left: 4pt solid #14F195;
+    border-radius: 4pt;
+    margin-bottom: 20pt;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    margin: 0 auto 20pt;
+    border-collapse: collapse;
+    background-color: #F9F9F9;
+    border-radius: 4pt;
+}
+
+th, td {
+    padding: 10pt;
+    text-align: left;
+    border-bottom: 0.5pt solid #ddd;
+    font-size: 11pt;
+}
+
+th {
+    background-color: #E6F7EF;
+    color: #9945FF;
+    font-weight: 600;
+    border-left: 4pt solid #14F195;
+}
+
+td {
+    font-weight: 400;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Company details */
+.company-details {
+    width: 100%;
+    margin: 0 auto 20pt;
+    padding: 15pt;
+    background-color: #F9F9F9;
+    border-left: 4pt solid #14F195;
+    border-radius: 4pt;
+}
+
+.company-details p {
+    margin: 8pt 0;
+    font-weight: 400;
+}
+
+/* Notes and small text */
+.notes {
+    font-size: 10pt;
+    color: #4A4A4A;
+    font-style: italic;
+    margin-top: 4pt;
+}
+
+/* App links */
+.app-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15pt;
+    padding: 10pt;
+    flex-wrap: wrap;
+}
+
+.app-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-link img {
+    max-width: 120pt;
+    height: auto;
+    margin: 5pt;
+}
+
+.leap_logo img {
+    max-width: 60pt;
+    height: auto;
+}
+
+/* Links in tables */
+td a {
+    color: #9945FF;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* Special table cell for app links */
+td[colspan] {
+    text-align: center;
+    vertical-align: middle;
+    padding: 15pt;
+}
+
+/* Strong text styling */
+strong {
+    color: #9945FF;
+    font-weight: 600;
+}
