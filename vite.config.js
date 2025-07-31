@@ -9,7 +9,7 @@ export default defineConfig({
     }),
     quasar()
   ],
-  base: process.env.NODE_ENV === 'production' ? '/BDC-OnBoarding/' : '/',
+  base: '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets'
