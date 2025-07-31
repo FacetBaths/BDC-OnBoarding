@@ -49,21 +49,29 @@ const downloadPdf = async () => {
     link.click()
     document.body.removeChild(link)
     
-    // Success notification
-    $q.notify({
-      type: 'positive',
-      message: 'PDF download started',
-      icon: 'fas fa-download',
-      position: 'top'
-    })
+    // Success notification (with error handling)
+    try {
+      $q.notify({
+        type: 'positive',
+        message: 'PDF download started',
+        icon: 'fas fa-download',
+        position: 'top'
+      })
+    } catch (error) {
+      console.log('Notification error (non-critical):', error)
+    }
   } catch (error) {
     console.error('Download error:', error)
-    $q.notify({
-      type: 'negative',
-      message: 'Failed to download PDF',
-      icon: 'fas fa-exclamation-triangle',
-      position: 'top'
-    })
+    try {
+      $q.notify({
+        type: 'negative',
+        message: 'Failed to download PDF',
+        icon: 'fas fa-exclamation-triangle',
+        position: 'top'
+      })
+    } catch (error) {
+      console.log('Notification error (non-critical):', error)
+    }
   } finally {
     isDownloading.value = false
   }

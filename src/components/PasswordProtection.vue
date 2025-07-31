@@ -146,22 +146,30 @@ const checkPassword = async () => {
   isLoading.value = true
   
   // Check password immediately
+  console.log('Checking password:', password.value === CORRECT_PASSWORD ? 'CORRECT' : 'INCORRECT')
+  
   if (password.value === CORRECT_PASSWORD) {
     // Store authentication in localStorage
     localStorage.setItem('bdcAuthenticated', 'true')
     localStorage.setItem('bdcAuthTime', Date.now().toString())
+    console.log('Authentication stored in localStorage')
     
-    // Success notification
-    $q.notify({
-      type: 'positive',
-      message: 'Access granted! Welcome to BDC Portal',
-      icon: 'fas fa-check-circle',
-      position: 'top'
-    })
+    // Success notification (with error handling)
+    try {
+      $q.notify({
+        type: 'positive',
+        message: 'Access granted! Welcome to BDC Portal',
+        icon: 'fas fa-check-circle',
+        position: 'top'
+      })
+    } catch (error) {
+      console.log('Notification error (non-critical):', error)
+    }
     
     // Brief delay for visual feedback, then emit authentication
     setTimeout(() => {
       isLoading.value = false
+      console.log('Emitting authenticated event')
       emit('authenticated')
     }, 300)
   } else {
@@ -171,13 +179,17 @@ const checkPassword = async () => {
       errorMessage.value = 'Invalid access code. Please try again.'
       password.value = ''
       
-      // Error notification
-      $q.notify({
-        type: 'negative',
-        message: 'Invalid access code',
-        icon: 'fas fa-exclamation-triangle',
-        position: 'top'
-      })
+      // Error notification (with error handling)
+      try {
+        $q.notify({
+          type: 'negative',
+          message: 'Invalid access code',
+          icon: 'fas fa-exclamation-triangle',
+          position: 'top'
+        })
+      } catch (error) {
+        console.log('Notification error (non-critical):', error)
+      }
       
       isLoading.value = false
     }, 500)
@@ -185,12 +197,16 @@ const checkPassword = async () => {
 }
 
 const redirectToMainSite = () => {
-  $q.notify({
-    type: 'info',
-    message: 'Redirecting to Facet Renovations main website...',
-    icon: 'fas fa-external-link-alt',
-    position: 'top'
-  })
+  try {
+    $q.notify({
+      type: 'info',
+      message: 'Redirecting to Facet Renovations main website...',
+      icon: 'fas fa-external-link-alt',
+      position: 'top'
+    })
+  } catch (error) {
+    console.log('Notification error (non-critical):', error)
+  }
   
   setTimeout(() => {
     window.location.href = 'https://facetrenovations.us/'
