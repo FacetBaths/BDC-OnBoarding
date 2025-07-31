@@ -114,7 +114,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, nextTick } from 'vue'
 import { useQuasar } from 'quasar'
 import logoImage from '/assets/Logo_v3_hi_res.png'
 
@@ -145,24 +145,28 @@ const checkPassword = async () => {
 
   isLoading.value = true
   
-  // Simulate a small delay for better UX
-  setTimeout(() => {
-    if (password.value === CORRECT_PASSWORD) {
-      // Store authentication in localStorage
-      localStorage.setItem('bdcAuthenticated', 'true')
-      localStorage.setItem('bdcAuthTime', Date.now().toString())
-      
-      // Success notification
-      $q.notify({
-        type: 'positive',
-        message: 'Access granted! Welcome to BDC Portal',
-        icon: 'fas fa-check-circle',
-        position: 'top'
-      })
-      
-      // Emit authentication success
+  // Check password immediately
+  if (password.value === CORRECT_PASSWORD) {
+    // Store authentication in localStorage
+    localStorage.setItem('bdcAuthenticated', 'true')
+    localStorage.setItem('bdcAuthTime', Date.now().toString())
+    
+    // Success notification
+    $q.notify({
+      type: 'positive',
+      message: 'Access granted! Welcome to BDC Portal',
+      icon: 'fas fa-check-circle',
+      position: 'top'
+    })
+    
+    // Brief delay for visual feedback, then emit authentication
+    setTimeout(() => {
+      isLoading.value = false
       emit('authenticated')
-    } else {
+    }, 300)
+  } else {
+    // Small delay for failed authentication for security
+    setTimeout(() => {
       hasError.value = true
       errorMessage.value = 'Invalid access code. Please try again.'
       password.value = ''
@@ -174,10 +178,10 @@ const checkPassword = async () => {
         icon: 'fas fa-exclamation-triangle',
         position: 'top'
       })
-    }
-    
-    isLoading.value = false
-  }, 500)
+      
+      isLoading.value = false
+    }, 500)
+  }
 }
 
 const redirectToMainSite = () => {

@@ -32,7 +32,13 @@ const checkAuthStatus = () => {
 
 // Handle successful authentication
 const handleAuthentication = () => {
-  isAuthenticated.value = true;
+  console.log('Authentication event received')
+  // Double-check localStorage for immediate state sync
+  const authStatus = localStorage.getItem('bdcAuthenticated')
+  if (authStatus === 'true') {
+    isAuthenticated.value = true
+    console.log('Authentication state updated to true')
+  }
 };
 
 // Handle logout
