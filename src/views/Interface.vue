@@ -161,11 +161,21 @@
       numbers or email info@facetrenovations.us—we're here to help you shine!
     </p>
     <div class="tagline">A luxurious look. A cut above.</div>
+    
+    <!-- PDF Download Section -->
+    <div class="pdf-download-section">
+      <PdfDownloadButton 
+        filename="Intro_bdc_facet_renovations_interface.pdf"
+        label="Download PDF Version"
+        icon="fas fa-file-pdf"
+      />
+    </div>
   </div>
 </template>
 
 <script setup>
 import logoImage from '/assets/Logo_v3_hi_res.png'
+import PdfDownloadButton from '../components/PdfDownloadButton.vue'
 
 const logoUrl = logoImage
 </script>
@@ -315,5 +325,14 @@ tr:last-child td {
 
 .app-link a:hover {
   background-color: #d4f0e8;
+}
+
+.pdf-download-section {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #F9F9F9;
+  border-radius: 10px;
+  border: 2px dashed #9945FF;
 }
 </style>

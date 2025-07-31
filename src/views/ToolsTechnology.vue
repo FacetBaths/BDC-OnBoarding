@@ -147,12 +147,22 @@
         training or help? Reach out; we're in this together.
       </p>
       <div class="tagline">A luxurious look. A cut above.</div>
+      
+      <!-- PDF Download Section -->
+      <div class="pdf-download-section">
+        <PdfDownloadButton 
+          filename="Intro_tools_technology.pdf"
+          label="Download PDF Version"
+          icon="fas fa-file-pdf"
+        />
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
 import logoImage from '/assets/Logo_v3_hi_res.png'
+import PdfDownloadButton from '../components/PdfDownloadButton.vue'
 
 const logoUrl = logoImage
 </script>
@@ -381,11 +391,20 @@ const logoUrl = logoImage
   font-style: italic;
   font-weight: 600;
   color: #14F195;
-  margin: 0;
+  margin: 0 0 1.5rem 0;
   padding: 1rem;
   background: linear-gradient(135deg, rgba(20, 241, 149, 0.05) 0%, rgba(153, 69, 255, 0.05) 100%);
   border-radius: 8px;
   border: 1px solid rgba(20, 241, 149, 0.2);
+}
+
+.pdf-download-section {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(153, 69, 255, 0.05) 0%, rgba(20, 241, 149, 0.05) 100%);
+  border-radius: 10px;
+  border: 2px dashed #9945FF;
 }
 
 /* Responsive Design */

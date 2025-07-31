@@ -21,11 +21,21 @@
       <li>Facet Renovations Interface Card</li>
     </ul>
     <div class="tagline">A luxurious look. A cut above.</div>
+    
+    <!-- PDF Download Section -->
+    <div class="pdf-download-section">
+      <PdfDownloadButton 
+        filename="Intro_bdc_onboarding_cover.pdf"
+        label="Download PDF Version"
+        icon="fas fa-file-pdf"
+      />
+    </div>
   </div>
 </template>
 
 <script setup>
 import logoImage from '/assets/Logo_v3_hi_res.png'
+import PdfDownloadButton from '../components/PdfDownloadButton.vue'
 
 const logoUrl = logoImage
 </script>
@@ -123,5 +133,14 @@ li:hover {
   background-color: #E6F7EF;
   border-radius: 5px;
   font-weight: 600;
+}
+
+.pdf-download-section {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #F9F9F9;
+  border-radius: 10px;
+  border: 2px dashed #9945FF;
 }
 </style>
