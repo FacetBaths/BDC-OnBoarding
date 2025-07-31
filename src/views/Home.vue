@@ -17,7 +17,7 @@
       <li>Current BDC Pay Structure</li>
       <li>Expectations & Responsibilities (including BDC WordTrax and Appointment Checklist)</li>
       <li>Tools & Technology</li>
-      <li>IRS Form - W9</li>
+     <!-- <li>IRS Form - W9</li> -->
       <li>Facet Renovations Interface Card</li>
     </ul>
     <div class="tagline">A luxurious look. A cut above.</div>
